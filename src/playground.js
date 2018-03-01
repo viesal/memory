@@ -24,9 +24,7 @@ class Card {
             this.el.className = 'Card Card_rotated';
         }
         this.rotated = !this.rotated;
-    }
-
-    
+    } 
 };
 
 class Playground {
@@ -159,3 +157,5 @@ class Playground {
     };
 
 };
+
+module.exports = Playground;
