@@ -73,6 +73,8 @@ class Playground {
 
         this.change_score = new CustomEvent('change_score', {detail: {score: this.score}});
 
+        document.dispatchEvent( this.change_score );
+
         this.finish_event = new Event('finish');
 
     };
@@ -132,6 +134,9 @@ class Playground {
         }
         else{
             this.score -= this.layone_cards * 42
+            if (this.score < 0){
+                this.score = 0;
+            }
             setTimeout(()=>{
                 this.change_score.detail.score = this.score
                 document.dispatchEvent( this.change_score )

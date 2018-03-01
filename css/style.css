@@ -111,3 +111,8 @@ button{
 h1{
     text-align: center;
 }
+
+.startGame{
+    text-decoration: none;
+    color: #ddeae0;
+}
