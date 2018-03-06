@@ -5,9 +5,11 @@ class Card {
 
         this.shirt = document.createElement('div');
         this.shirt.className = 'Card__shirt';
+        this.shirt.dataset.tid = 'Card-flipped';
 
         this.face = document.createElement('div');
         this.face.className = 'Card__face';
+        this.face.dataset.tid = 'Card';
 
         this.container = container;
 

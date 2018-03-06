@@ -21,14 +21,14 @@
     background-image: url(../img/null.png);
     background-position: center;
     background-size: 100%;
-    transform: translateZ(.001px) rotateY(-180deg);
+    transform: translateZ(1px) rotateY(-180deg);
 }
 
 .Card__shirt {
     background-image: url(../img/image.png);
     background-position: center;
     background-size: 100%;
-    transform: translateZ(-.001px);
+    transform: translateZ(2px);
 }
 
 .Card_rotated {

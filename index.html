@@ -8,18 +8,18 @@
     <script type="text/javascript" src="js/playground.js"></script>
 </head>
 <body>
-    <div id="cont1" class="container1">
+    <div id="cont1" class="container1" data-tid="App">
         <img src="img/StartGame.png" alt="StartGame">
         <h1 class="mg">Memory Game</h1>
-        <button type="button" onclick="startGame()">Начать игру</button>
+        <button type="button" onclick="startGame()" data-tid="NewGame-startGame">Начать игру</button>
     </div>
-    <div id="cont2" class="container2">
+    <div id="cont2" class="container2" data-tid="Deck">
         <div class="header">
             <div>
-                <a href="#" class="startGame" onclick="startGame()">Начать занового</a>
+                <a href="#" class="startGame" onclick="startGame()" data-tid="Menu-newGame">Начать занового</a>
             </div>
             <div>
-                Очки: <span  class="score" id="score">0</span>
+                Очки: <span  class="score" id="score" data-tid="Menu-scores">0</span>
             </div>
         </div>
         <div id="cards" class="cards">
@@ -31,7 +31,7 @@
             <div>Поздравляем!</div>
             <div>Ваш итоговый счет: <span class="score" id="score_end">0</span></div>
         </h1>
-        <button type="button" onclick="startGame()">Еще раз</button>
+        <button type="button" onclick="startGame()" data-tid="EndGame-retryGame">Еще раз</button>
     </div>
     <script>   
         function initGame(){
