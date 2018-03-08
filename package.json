@@ -1,12 +1,13 @@
 {
 	"scripts": {
-		"build": "webpack --config webpack.config.js"
+		"build": "webpack"
 	},
 	"devDependencies": {
 		"webpack": "^4.0.1",
 		"webpack-cli": "^2.0.9"
 	},
 	"dependencies": {
+		"n": "^2.1.8",
 		"node-static": "^0.7.10"
 	}
 }
