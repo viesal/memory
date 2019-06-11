@@ -1,146 +1,146 @@
 export default[
 	{
       "name":"6S",
-      "img":"../../static/img/Cards/6S.png"
+      "img":"../../../static/img/Cards/6S.png"
     },
     {
       "name":"6H",
-      "img":"../../static/img/Cards/6H.png"
+      "img":"../../../static/img/Cards/6H.png"
     },
     {
       "name":"6C",
-      "img":"../../static/img/Cards/6C.png"
+      "img":"../../../static/img/Cards/6C.png"
     },
     {
       "name":"6D",
-      "img":"../../static/img/Cards/6D.png"
+      "img":"../../../static/img/Cards/6D.png"
     },
     {
       "name":"7S",
-      "img":"../../static/img/Cards/7S.png"
+      "img":"../../../static/img/Cards/7S.png"
     },
     {
       "name":"7H",
-      "img":"../../static/img/Cards/7H.png"
+      "img":"../../../static/img/Cards/7H.png"
     },
     {
       "name":"7C",
-      "img":"../../static/img/Cards/7C.png"
+      "img":"../../../static/img/Cards/7C.png"
     },
     {
       "name":"7D",
-      "img":"../../static/img/Cards/7D.png"
+      "img":"../../../static/img/Cards/7D.png"
     },
     {
       "name":"8S",
-      "img":"../../static/img/Cards/8S.png"
+      "img":"../../../static/img/Cards/8S.png"
     },
     {
       "name":"8H",
-      "img":"../../static/img/Cards/8H.png"
+      "img":"../../../static/img/Cards/8H.png"
     },
     {
       "name":"8C",
-      "img":"../../static/img/Cards/8C.png"
+      "img":"../../../static/img/Cards/8C.png"
     },
     {
       "name":"8D",
-      "img":"../../static/img/Cards/8D.png"
+      "img":"../../../static/img/Cards/8D.png"
     },
     {
       "name":"9S",
-      "img":"../../static/img/Cards/9S.png"
+      "img":"../../../static/img/Cards/9S.png"
     },
     {
       "name":"9H",
-      "img":"../../static/img/Cards/9H.png"
+      "img":"../../../static/img/Cards/9H.png"
     },
     {
       "name":"9C",
-      "img":"../../static/img/Cards/9C.png"
+      "img":"../../../static/img/Cards/9C.png"
     },
     {
       "name":"9D",
-      "img":"../../static/img/Cards/9D.png"
+      "img":"../../../static/img/Cards/9D.png"
     },
     {
         "name":"0S",
-        "img":"../../static/img/Cards/0S.png"
+        "img":"../../../static/img/Cards/0S.png"
     },
     {
         "name":"0H",
-        "img":"../../static/img/Cards/0H.png"
+        "img":"../../../static/img/Cards/0H.png"
     },
     {
         "name":"0C",
-        "img":"../../static/img/Cards/0C.png"
+        "img":"../../../static/img/Cards/0C.png"
     },
     {
         "name":"0D",
-        "img":"../../static/img/Cards/0D.png"
+        "img":"../../../static/img/Cards/0D.png"
     },
     {
         "name":"JS",
-        "img":"../../static/img/Cards/JS.png"
+        "img":"../../../static/img/Cards/JS.png"
     },
     {
         "name":"JH",
-        "img":"../../static/img/Cards/JH.png"
+        "img":"../../../static/img/Cards/JH.png"
     },
     {
         "name":"JC",
-        "img":"../../static/img/Cards/JC.png"
+        "img":"../../../static/img/Cards/JC.png"
     },
     {
         "name":"JD",
-        "img":"../../static/img/Cards/JD.png"
+        "img":"../../../static/img/Cards/JD.png"
     },
     {
         "name":"QS",
-        "img":"../../static/img/Cards/QS.png"
+        "img":"../../../static/img/Cards/QS.png"
     },
     {
         "name":"QH",
-        "img":"../../static/img/Cards/QH.png"
+        "img":"../../../static/img/Cards/QH.png"
     },
     {
         "name":"QC",
-        "img":"../../static/img/Cards/QC.png"
+        "img":"../../../static/img/Cards/QC.png"
     },
     {
         "name":"QD",
-        "img":"../../static/img/Cards/QD.png"
+        "img":"../../../static/img/Cards/QD.png"
     },
     {
         "name":"KS",
-        "img":"../../static/img/Cards/KS.png"
+        "img":"../../../static/img/Cards/KS.png"
     },
     {
         "name":"KH",
-        "img":"../../static/img/Cards/KH.png"
+        "img":"../../../static/img/Cards/KH.png"
     },
     {
         "name":"KC",
-        "img":"../../static/img/Cards/KC.png"
+        "img":"../../../static/img/Cards/KC.png"
     },
     {
         "name":"KD",
-        "img":"../../static/img/Cards/KD.png"
+        "img":"../../../static/img/Cards/KD.png"
     },
     {
         "name":"AS",
-        "img":"../../static/img/Cards/AS.png"
+        "img":"../../../static/img/Cards/AS.png"
     },
     {
         "name":"AH",
-        "img":"../../static/img/Cards/AH.png"
+        "img":"../../../static/img/Cards/AH.png"
     },
     {
         "name":"AC",
-        "img":"../../static/img/Cards/AC.png"
+        "img":"../../../static/img/Cards/AC.png"
     },
     {
         "name":"AD",
-        "img":"../../static/img/Cards/AD.png"
+        "img":"../../../static/img/Cards/AD.png"
     }
 ]
