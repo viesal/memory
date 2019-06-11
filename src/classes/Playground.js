@@ -13,7 +13,7 @@ export class Playground {
         this.cards = []
         for (const item of this.getRandomArr()){
             const card = new Card(this.container)
-            card.face.style.backgroundImage = `url(${window.location.pathname}/static/img/Cards/${cards_data[item].img})`
+            card.face.style.backgroundImage = `url(${window.location.pathname}static/img/Cards/${cards_data[item].img})`
             card.name = cards_data[item].name
             this.cards.push(card)
         }
