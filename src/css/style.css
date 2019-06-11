@@ -1,4 +1,4 @@
-.Card {
+.card {
     position: absolute;
     width: 110px;
     height: 153px;
@@ -9,7 +9,7 @@
     transition: transform .5s cubic-bezier(0, 0, 1, 1)
 }
 
-.Card > div {
+.card > div {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -17,25 +17,25 @@
     top: 0;
 }
 
-.Card__face {
-    background-image: url(../img/null.png);
+.card__face {
+    background-image: url(../../static/img/null.png);
     background-position: center;
     background-size: 100%;
     transform: translateZ(1px) rotateY(-180deg);
 }
 
-.Card__shirt {
-    background-image: url(../img/image.png);
+.card__shirt {
+    background-image: url(../../static/img/image.png);
     background-position: center;
     background-size: 100%;
     transform: translateZ(2px);
 }
 
-.Card_rotated {
+.card_rotated {
     transform: rotateY(-180deg);
 }
 
-.Block{
+.block{
     position: absolute;
     top: 0px;
     left: 0px;

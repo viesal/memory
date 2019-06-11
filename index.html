@@ -1,79 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <title>Memory</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/cards.json"></script>
-    <script type="text/javascript" src="js/playground.js"></script>
-</head>
-<body>
-    <div id="cont1" class="container1" data-tid="App">
-        <img src="img/StartGame.png" alt="StartGame">
-        <h1 class="mg">Memory Game</h1>
-        <button type="button" onclick="startGame()" data-tid="NewGame-startGame">Начать игру</button>
-    </div>
-    <div id="cont2" class="container2" data-tid="Deck">
-        <div class="header">
-            <div>
-                <a href="#" class="startGame" onclick="startGame()" data-tid="Menu-newGame">Начать занового</a>
-            </div>
-            <div>
-                Очки: <span  class="score" id="score" data-tid="Menu-scores">0</span>
-            </div>
-        </div>
-        <div id="cards" class="cards">
-        </div>
-    </div>
-    <div id="cont3" class="container3">
-        <img src="img/Group2.png" alt="FinishGame">
-        <h1>
-            <div>Поздравляем!</div>
-            <div>Ваш итоговый счет: <span class="score" id="score_end">0</span></div>
-        </h1>
-        <button type="button" onclick="startGame()" data-tid="EndGame-retryGame">Еще раз</button>
-    </div>
-    <script>   
-        function initGame(){
-            let cont1 = document.getElementById('cont1')
-            let cont2 = document.getElementById('cont2')
-            let cont3 = document.getElementById('cont3')
-            cont1.style.visibility = 'visible';
-            cont2.style.visibility = 'hidden';
-            cont3.style.visibility = 'hidden';
-        }
-
-        function startGame(){
-            let cont1 = document.getElementById('cont1')
-            let cont2 = document.getElementById('cont2')
-            let cont3 = document.getElementById('cont3')
-            cont1.style.visibility = 'hidden';
-            cont2.style.visibility = 'visible';
-            cont3.style.visibility = 'hidden';
-            playground = new Playground(cards, document.getElementById('cards'))
-        }
-
-        function finishGame(){
-            let cont1 = document.getElementById('cont1')
-            let cont2 = document.getElementById('cont2')
-            let cont3 = document.getElementById('cont3')
-            cont1.style.visibility = 'hidden';
-            cont2.style.visibility = 'hidden';
-            cont3.style.visibility = 'visible';
-        }
-
-        window.onload = () => {
-            initGame()
-            document.addEventListener('finish', function(){
-                finishGame()
-            });
-            document.addEventListener('change_score', function(e){
-                for (let item of document.getElementsByClassName('score')){
-                    item.innerHTML = e.detail.score;
-                }
-            });
-        }
-    </script>
-
-</body>
+    <title>memory</title>
+  </head>
+  <body>
+  <script type="text/javascript" src="bundle.js"></script></body>
 </html>

@@ -1,15 +1,15 @@
 class Card {
     constructor(container) {
         this.el = document.createElement('div');
-        this.el.className = 'Card';
+        this.el.className = 'card';
 
         this.shirt = document.createElement('div');
-        this.shirt.className = 'Card__shirt';
-        this.shirt.dataset.tid = 'Card-flipped';
+        this.shirt.className = 'card__shirt';
+        this.shirt.dataset.tid = 'card-flipped';
 
         this.face = document.createElement('div');
-        this.face.className = 'Card__face';
-        this.face.dataset.tid = 'Card';
+        this.face.className = 'card__face';
+        this.face.dataset.tid = 'card';
 
         this.container = container;
 
@@ -21,9 +21,9 @@ class Card {
 
     rotate() {
         if (this.rotated) {
-            this.el.className = 'Card';
+            this.el.className = 'card';
         } else {
-            this.el.className = 'Card Card_rotated';
+            this.el.className = 'card card_rotated';
         }
         this.rotated = !this.rotated;
     }
@@ -31,7 +31,7 @@ class Card {
     
 };
 
-class Playground {
+export class Playground {
     constructor(cards_data, container){
         this.container = container
         while(this.container.firstChild){
@@ -42,7 +42,7 @@ class Playground {
         // let arr = this.randomArr()
         for (let item of this.randomArr()){
             let obj = new Card ( this.container )
-            obj.face.style.backgroundImage = 'url('+ cards_data[item].img +')'
+            obj.face.style.backgroundImage = `url(${cards_data[item].img})`
             obj.name = cards_data[item].name
             this.cards.push(obj)
         }
@@ -67,7 +67,7 @@ class Playground {
         this.layone_cards = 0;
 
         this.block_el = document.createElement('div');
-        this.block_el.className = 'Block';
+        this.block_el.className = 'block';
 
         this.container.appendChild(this.block_el)
 
