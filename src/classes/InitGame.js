@@ -25,7 +25,7 @@ export class InitGame {
     }
 
     createCont1() {
-        createElement(this.cont1, 'img', [['src', '../static/img/StartGame.png'], ['alt', 'StartGame']])
+        createElement(this.cont1, 'img', [['src', './static/img/StartGame.png'], ['alt', 'StartGame']])
         const h1 = createElement(this.cont1, 'h1', [['class', 'mg']])
         h1.innerText = 'MemoryGame'
         const buttonStart = createElement(this.cont1, 'button', [['type', 'button'], ['data-tid', 'NewGame-startGame']])
@@ -47,7 +47,7 @@ export class InitGame {
     }
 
     createCont3() {
-        createElement(this.cont3, 'img', [['src', '../static/img/Group2.png'], ['alt', 'FinishGame']])
+        createElement(this.cont3, 'img', [['src', './static/img/Group2.png'], ['alt', 'FinishGame']])
         const h1 = createElement(this.cont3, 'h1')
         const grac = createElement(h1, 'div')
         grac.innerText = 'Поздравляем!'
