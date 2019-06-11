@@ -1,5 +1,6 @@
 import { Card } from './Card'
 import { createElement } from '../utils'
+import path from 'path'
 
 export class Playground {
     constructor(cards_data, container, finish_game){
@@ -12,7 +13,7 @@ export class Playground {
         this.cards = []
         for (const item of this.getRandomArr()){
             const card = new Card(this.container)
-            card.face.style.backgroundImage = `url(${cards_data[item].img})`
+            card.face.style.backgroundImage = `url(${path.resolve(__dirname, `static/img/Cards/${cards_data[item].img}`)})`
             card.name = cards_data[item].name
             this.cards.push(card)
         }
@@ -35,7 +36,7 @@ export class Playground {
         this.layone_cards = 0;
         this.block_el = createElement(this.container, 'div', [['class', 'block']]);
         this.rotateAll()
-        this.change_score = new CustomEvent('change_score', {detail: {score: this.score}});
+        this.change_score = new CustomEvent('change_score', { detail: { score: this.score } });
         document.dispatchEvent( this.change_score );
         this.finish_event = new Event('finish');
     };
