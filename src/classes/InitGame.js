@@ -1,6 +1,6 @@
 import { Playground } from './Playground'
 import { createElement } from '../utils'
-import cards from '../data/cards'
+import cards from '../data'
 
 export class InitGame {
     constructor(container) {
