@@ -1,50 +1,20 @@
-class Card {
-    constructor(container) {
-        this.el = document.createElement('div');
-        this.el.className = 'card';
-
-        this.shirt = document.createElement('div');
-        this.shirt.className = 'card__shirt';
-        this.shirt.dataset.tid = 'card-flipped';
-
-        this.face = document.createElement('div');
-        this.face.className = 'card__face';
-        this.face.dataset.tid = 'card';
-
-        this.container = container;
-
-        this.container.appendChild(this.el);
-        this.el.appendChild(this.shirt);
-        this.el.appendChild(this.face);
-
-    }
-
-    rotate() {
-        if (this.rotated) {
-            this.el.className = 'card';
-        } else {
-            this.el.className = 'card card_rotated';
-        }
-        this.rotated = !this.rotated;
-    }
-
-    
-};
+import { Card } from './Card'
+import { createElement } from '../utils'
 
 export class Playground {
-    constructor(cards_data, container){
+    constructor(cards_data, container, finish_game){
         this.container = container
+        this.finish_game = finish_game
         while(this.container.firstChild){
             this.container.removeChild(this.container.firstChild)
         }
 
         this.cards = []
-        // let arr = this.randomArr()
-        for (let item of this.randomArr()){
-            let obj = new Card ( this.container )
-            obj.face.style.backgroundImage = `url(${cards_data[item].img})`
-            obj.name = cards_data[item].name
-            this.cards.push(obj)
+        for (const item of this.getRandomArr()){
+            const card = new Card(this.container)
+            card.face.style.backgroundImage = `url(${cards_data[item].img})`
+            card.name = cards_data[item].name
+            this.cards.push(card)
         }
         let left = 0;
         let top = 0;
@@ -54,38 +24,26 @@ export class Playground {
                 left = 0;
             }
             this.cards[index].index = index
-            this.cards[index].el.style.top = top+'px';
-            this.cards[index].el.style.left = left+'px';
-            this.cards[index].el.addEventListener('click', () =>{
-                this.rotateElement(this.cards[index])
-            })
+            this.cards[index].el.style.top = `${top}px`;
+            this.cards[index].el.style.left = `${left}px`;
+            this.cards[index].el.addEventListener('click', this.rotateElement(this.cards[index]))
             left += 130;
         }
         this.select_card = null;
         this.select_index = -1;
         this.score = 0;
         this.layone_cards = 0;
-
-        this.block_el = document.createElement('div');
-        this.block_el.className = 'block';
-
-        this.container.appendChild(this.block_el)
-
+        this.block_el = createElement(this.container, 'div', [['class', 'block']]);
         this.rotateAll()
-
         this.change_score = new CustomEvent('change_score', {detail: {score: this.score}});
-
         document.dispatchEvent( this.change_score );
-
         this.finish_event = new Event('finish');
-
     };
 
-    randomArr(){
+    getRandomArr(){
         let arr = [];
         while (arr.length < 18) {
-            let rand = Math.random() * 36;
-            rand = Math.floor(rand);
+            const rand = Math.floor(Math.random() * 36);
             if (arr.indexOf(rand) == -1){
                 arr.push(rand)
                 arr.push(rand)
@@ -94,8 +52,8 @@ export class Playground {
         let lenght = arr.length
         while (lenght != 0) {
             lenght -= 1;
-            let randItem = Math.floor(Math.random()*(lenght+1))
-            let tempNum = arr[lenght]
+            const randItem = Math.floor(Math.random()*(lenght+1))
+            const tempNum = arr[lenght]
             arr[lenght] = arr[randItem]
             arr[randItem] = tempNum  
         }
@@ -112,7 +70,7 @@ export class Playground {
         this.blocked = !this.blocked
     };
 
-    rotateElement(element){
+    rotateElement = (element) => () => {
         element.rotate()
         this.block()
         if (this.select_card == null) {
@@ -124,13 +82,13 @@ export class Playground {
             this.score += (18 - this.layone_cards) * 42
             setTimeout(()=>{
                 this.change_score.detail.score = this.score
-                document.dispatchEvent( this.change_score )
+                document.dispatchEvent(this.change_score)
                 element.el.remove()
                 this.cards[this.select_card.index].el.remove()
                 this.select_card = null
                 this.block()
                 if (this.layone_cards == 18){
-                    document.dispatchEvent( this.finish_event );
+                    this.finish_game()
                 }
             }, 1500);
         }
@@ -153,12 +111,12 @@ export class Playground {
     rotateAll(){
         this.block()
         setTimeout(()=>{
-            for( let item of this.cards){
+            for( const item of this.cards){
                 item.rotate()
             }
         }, 1000)
         setTimeout(()=>{
-            for( let item of this.cards){
+            for( const item of this.cards){
                 item.rotate()
             }
             this.block()

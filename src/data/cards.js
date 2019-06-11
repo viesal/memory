@@ -1,4 +1,4 @@
-export const cards = [
+export default[
 	{
       "name":"6S",
       "img":"../../static/img/Cards/6S.png"
