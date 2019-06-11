@@ -41,36 +41,6 @@ export class Playground {
         this.finish_event = new Event('finish');
     };
 
-    getRandomArr(){
-        let arr = [];
-        while (arr.length < 18) {
-            const rand = Math.floor(Math.random() * 36);
-            if (arr.indexOf(rand) == -1){
-                arr.push(rand)
-                arr.push(rand)
-            }
-        }
-        let lenght = arr.length
-        while (lenght != 0) {
-            lenght -= 1;
-            const randItem = Math.floor(Math.random()*(lenght+1))
-            const tempNum = arr[lenght]
-            arr[lenght] = arr[randItem]
-            arr[randItem] = tempNum  
-        }
-        return arr
-    };
-
-    block(){
-        if (this.blocked){
-            this.block_el.style.zIndex = -1;    
-        }
-        else{
-            this.block_el.style.zIndex = 0; 
-        }
-        this.blocked = !this.blocked
-    };
-
     rotateElement = (element) => () => {
         element.rotate()
         this.block()
@@ -107,6 +77,36 @@ export class Playground {
                 this.block()
             }, 1500);
         }
+    };
+
+    getRandomArr(){
+        let arr = [];
+        while (arr.length < 18) {
+            const rand = Math.floor(Math.random() * 36);
+            if (arr.indexOf(rand) == -1){
+                arr.push(rand)
+                arr.push(rand)
+            }
+        }
+        let lenght = arr.length
+        while (lenght != 0) {
+            lenght -= 1;
+            const randItem = Math.floor(Math.random()*(lenght+1))
+            const tempNum = arr[lenght]
+            arr[lenght] = arr[randItem]
+            arr[randItem] = tempNum  
+        }
+        return arr
+    };
+
+    block(){
+        if (this.blocked){
+            this.block_el.style.zIndex = -1;    
+        }
+        else{
+            this.block_el.style.zIndex = 0; 
+        }
+        this.blocked = !this.blocked
     };
 
     rotateAll(){

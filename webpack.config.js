@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default {
 	module: {
 		rules: [
 			{
@@ -42,12 +42,12 @@ module.exports = {
 			{
 				test: /\.(png|jpe?g|gif)$/,
 				use: [
-				  {
-					loader: 'file-loader',
-					options: {
-					  name: '[path][name].[ext]',
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[path][name].[ext]',
+						},
 					},
-				  },
 				],
 			},
 		]
@@ -81,13 +81,13 @@ module.exports = {
 	},
 	plugins: [
 		//   new CleanWebpackPlugin(),
-		  new HtmlWebpackPlugin({
+		new HtmlWebpackPlugin({
 			title: 'memory'
-		  })
-		],
+		})
+	],
 	devServer: {
 		contentBase: path.join(__dirname, './'),
-    compress: true,
+		compress: true,
 		port: 9000,
 		open: true
 	}

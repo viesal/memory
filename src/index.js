@@ -1,6 +1,4 @@
-import './css/style.css'
-import {InitGame} from './classes'
+import './css/style.css';
+import {InitGame} from './classes';
 
-window.onload = () => {
-    new InitGame(document.body)  
-}
+window.onload = () => new InitGame(document.body);
